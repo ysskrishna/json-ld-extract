@@ -77,7 +77,7 @@ https.get(url, res => {
 
 ---
 
-## Usage
+🛠 Usage (Repository Version)
 
 ### Node.js
 
@@ -90,17 +90,6 @@ node node/index.js <url>
 ```bash
 python3 python/main.py <url>
 ```
-
-Copy-paste with a real URL:
-
-```bash
-node node/index.js https://ysskrishna.vercel.app/blog/move-windows-between-monitors-macos-raycast
-```
-
-```bash
-python3 python/main.py https://ysskrishna.vercel.app/blog/move-windows-between-monitors-macos-raycast
-```
-
 
 **Output (illustrative):**
 
