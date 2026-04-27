@@ -23,6 +23,60 @@
 
 ---
 
+## Quick run (no clone)
+
+You can extract JSON-LD without cloning this repository. Copy below script, replace `YOUR_URL`, and run it in a shell—handy for quick checks or wiring into scripts.
+
+### Python
+
+[View standalone Gist](https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9)
+
+```bash
+python3 -c "
+import urllib.request, json, re
+
+url = 'YOUR_URL'
+
+with urllib.request.urlopen(url) as res:
+    buf = ''
+    while True:
+        chunk = res.read(4096).decode('utf-8', errors='ignore')
+        if not chunk:
+            break
+        buf += chunk
+        m = re.search(r'<script type=\"application/ld\+json\">([\s\S]*?)</script>', buf)
+        if m:
+            print(json.dumps(json.loads(m.group(1)), indent=2))
+            break  # stop reading early, like res.destroy()
+"
+```
+
+### Node.js
+
+[View standalone Gist](https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7)
+
+```bash
+node -e "
+const https = require('https');
+const url = 'YOUR_URL';
+
+https.get(url, res => {
+  let buffer = '';
+  res.on('data', chunk => {
+    buffer += chunk;
+
+    const match = buffer.match(/<script type=\"application\/ld\\+json\">([\\s\\S]*?)<\\/script>/);
+    if (match) {
+      console.log(JSON.stringify(JSON.parse(match[1]), null, 2));
+      res.destroy(); // 🚀 stop downloading early
+    }
+  });
+});
+"
+```
+
+---
+
 ## Usage
 
 ### Node.js
@@ -108,5 +162,7 @@ MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LI
 <p align="left">
   <a href="https://github.com/ysskrishna">Author's GitHub</a> •
   <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
-  <a href="https://github.com/ysskrishna/extract-ld-json/issues">Report issues</a>
+  <a href="https://github.com/ysskrishna/extract-ld-json/issues">Report issues</a> •
+  <a href="https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9">Python (standalone)</a> •
+  <a href="https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7">Node (standalone)</a>
 </p>
