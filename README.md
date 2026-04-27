@@ -18,21 +18,13 @@ Useful for quickly inspecting [JSON-LD](https://json-ld.org/) / structured data 
 ### Node
 
 ```bash
-node node/index.js https://example.com/page
+node node/index.js https://ysskrishna.vercel.app/blog/move-windows-between-monitors-macos-raycast
 ```
 
 ### Python
 
 ```bash
-python3 python/main.py https://example.com/page
-```
-
-### Example script
-
-```bash
-chmod +x examples/demo.sh
-./examples/demo.sh
-# or: ./examples/demo.sh https://example.com
+python3 python/main.py https://ysskrishna.vercel.app/blog/move-windows-between-monitors-macos-raycast
 ```
 
 ## Behavior
