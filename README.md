@@ -1,5 +1,9 @@
 # Extract LD+JSON from HTML
 
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+![Node.js](https://img.shields.io/badge/node.js-18%2B-339933.svg)
+
 Small command-line utilities that **stream** a page over HTTP(S), stop as soon as they find the first `<script type="application/ld+json">` block, and print pretty-printed JSON to stdout.
 
 Useful for quickly inspecting [JSON-LD](https://json-ld.org/) / structured data on a live URL without downloading the whole HTML first.
@@ -45,4 +49,12 @@ chmod +x examples/demo.sh
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LICENSE) for details.
+
+---
+
+<p align="left">
+  <a href="https://github.com/ysskrishna">Author's GitHub</a> •
+  <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
+  <a href="https://github.com/ysskrishna/extract-ld-json/issues">Report issues</a>
+</p>
