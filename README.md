@@ -6,37 +6,20 @@
 
 > Instantly extract and inspect [JSON-LD](https://json-ld.org/) structured data from any webpage.
 
----
+## 📘 What is JSON-LD?
+**JSON-LD (JavaScript Object Notation for Linked Data)** is a format websites use to provide a "behind-the-scenes" summary to search engines. While invisible to visitors, it tells Google and Bing exactly what a page is about:
+*   **Content Type:** Is this an Article, Product, or Event?
+*   **Metadata:** Who is the author? What is the published date?
+*   **Rich Results:** This data is what enables "Star Ratings," FAQ dropdowns, and Recipe cards in search results.
 
-## Why this tool?
-
-If you work with:
-
-- SEO
-- Schema markup
-- Rich results
-- Content audits
+**Why this tool matters:** If your JSON-LD is broken or missing, search engines may struggle to index your content correctly. This tool lets you verify that data in seconds.
 
 ---
 
-## What it does
-
-- Connects to a live URL over HTTP(S)
-- Extracts JSON-LD (`application/ld+json`)
-- Prints clean, formatted JSON
-
-All in **one command**.
-
-**How it works:** the response is read in chunks. As soon as the **first** complete `application/ld+json` script block is found, the client **stops downloading** and pretty-prints that JSON to stdout—so you often avoid pulling the full HTML.
-
----
-
-## Who is this for?
-
-- SEO specialists inspecting structured data
-- Content teams validating schema markup
-- Developers debugging JSON-LD output
-- Anyone doing quick website audits
+## ✨ Key Features
+*   **High Speed:** Reads the webpage in chunks and stops as soon as the data is found—no need to wait for a full page download.
+*   **Zero Dependencies:** Built entirely on the Node.js and Python standard libraries. No `pip install` or `npm install` required.
+*   **Clean Output:** Automatically formats messy code into a human-readable JSON structure.
 
 ---
 
@@ -100,39 +83,16 @@ python3 python/main.py https://ysskrishna.vercel.app/blog/move-windows-between-m
 
 ---
 
-## Features
+## 🛠 Technical Details
 
-- Extract JSON-LD from any live URL
-- Clean, pretty-printed output
-- Fast and lightweight
-- No extra dependencies (stdlib only in both implementations)
-- Works with Node.js and Python
+### Who is this for?
+*   **SEO Specialists:** Quickly audit Schema markup on any site.
+*   **Developers:** Debug structured data output during local development.
+*   **Content Teams:** Ensure that "Rich Result" data is correctly formatted before publishing.
 
----
-
-## Use cases
-
-- Validate structured data quickly
-- Debug schema issues
-- Inspect competitors’ markup
-- Automate SEO checks in scripts
-
----
-
-## Behavior
-
-- Output is **one** JSON value: the **first** matching `application/ld+json` block. Pages with multiple JSON-LD blocks are not fully enumerated.
-- Exits with a non-zero status and a message on stderr if: the URL is invalid, the request fails, no matching script is found, or the script body is not valid JSON.
-
----
-
-## Limitations
-
-- Matching uses a **regex**, not a full HTML parser; unusual markup around the script tag may break detection.
-- Some sites block non-browser clients; you may need a custom `User-Agent` or other headers (not included here).
-- The Node CLI supports only **http:** and **https:** URLs.
-
----
+### Behavior & Limitations
+*   **First-Match Logic:** To stay fast, the tool extracts the **first** `application/ld+json` block it encounters. 
+*   **Regex-Based:** Uses pattern matching rather than a heavy HTML parser to keep the tool lightweight.
 
 ## Requirements
 
