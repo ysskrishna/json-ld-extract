@@ -29,7 +29,7 @@ You can extract JSON-LD without cloning this repository. Copy below script, repl
 
 ### Python
 
-[View standalone Gist](https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9)
+Standalone gist: [Python JSON-LD fetch](https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9)
 
 ```bash
 python3 -c "
@@ -53,7 +53,7 @@ with urllib.request.urlopen(url) as res:
 
 ### Node.js
 
-[View standalone Gist](https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7)
+Standalone gist: [Node JSON-LD fetch](https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7)
 
 ```bash
 node -e "
