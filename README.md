@@ -84,13 +84,13 @@ https.get(url, res => {
 "
 ```
 
----
-
-🛠 Usage (Repository Version)
-
 </details>
 
-<a id="nodejs"></a>
+---
+
+## 🛠 Usage (Repository Version)
+
+<a id="nodejs-1"></a>
 
 <details>
 <summary><b>Node.js</b></summary>
@@ -101,7 +101,7 @@ node node/index.js <url>
 
 </details>
 
-<a id="python"></a>
+<a id="python-1"></a>
 
 <details>
 <summary><b>Python</b></summary>
