@@ -1,8 +1,9 @@
 # Extract JSON-LD from any webpage
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ysskrishna/json-ld-extract/blob/main/LICENSE)
 ![Node.js](https://img.shields.io/badge/node.js-18%2B-339933.svg)
 ![Python](https://img.shields.io/badge/python-3.9%2B-blue.svg)
+[![Author site](https://img.shields.io/badge/author-ysskrishna.space-informational)](https://ysskrishna.space)
 
 > Instantly extract and inspect [JSON-LD](https://json-ld.org/) structured data from any webpage.
 
@@ -27,7 +28,10 @@
 
 You can extract JSON-LD without cloning this repository. Copy below script, replace `YOUR_URL`, and run it in a shell—handy for quick checks or wiring into scripts.
 
-### Python
+<a id="python"></a>
+
+<details>
+<summary><b>Python</b></summary>
 
 Standalone gist: [Python JSON-LD fetch](https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9)
 
@@ -51,7 +55,12 @@ with urllib.request.urlopen(url) as res:
 "
 ```
 
-### Node.js
+</details>
+
+<a id="nodejs"></a>
+
+<details>
+<summary><b>Node.js</b></summary>
 
 Standalone gist: [Node JSON-LD fetch](https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7)
 
@@ -79,13 +88,23 @@ https.get(url, res => {
 
 🛠 Usage (Repository Version)
 
-### Node.js
+</details>
+
+<a id="nodejs"></a>
+
+<details>
+<summary><b>Node.js</b></summary>
 
 ```bash
 node node/index.js <url>
 ```
 
-### Python
+</details>
+
+<a id="python"></a>
+
+<details>
+<summary><b>Python</b></summary>
 
 ```bash
 python3 python/main.py <url>
@@ -126,6 +145,8 @@ python3 python/main.py <url>
 
 ---
 
+</details>
+
 ## 🛠 Technical Details
 
 ### Who is this for?
@@ -142,6 +163,23 @@ python3 python/main.py <url>
 - **Node.js** 18+ (uses built-in `http` / `https`), or
 - **Python** 3.9+ (stdlib only)
 
+## Built and maintained by
+
+Extract JSON-LD from any webpage is built and maintained by:
+
+| | Name | GitHub | Role |
+|---|------|--------|------|
+| <img src="https://github.com/ysskrishna.png?size=120" width="60" height="60" alt="Y. Siva Sai Krishna"> | **Y. Siva Sai Krishna** | [@ysskrishna](https://github.com/ysskrishna) | Creator |
+
+## Support
+
+If you find this project helpful:
+
+- ⭐ Star the repository
+- 🐛 [Report issues](https://github.com/ysskrishna/json-ld-extract/issues)
+- 🔀 Submit pull requests
+- 💝 [Sponsor on GitHub](https://github.com/sponsors/ysskrishna)
+
 ## License
 
 MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LICENSE) for details.
@@ -151,7 +189,8 @@ MIT © [Y. Siva Sai Krishna](https://github.com/ysskrishna) — see [LICENSE](LI
 <p align="left">
   <a href="https://github.com/ysskrishna">Author's GitHub</a> •
   <a href="https://linkedin.com/in/ysskrishna">Author's LinkedIn</a> •
-  <a href="https://github.com/ysskrishna/extract-ld-json/issues">Report issues</a> •
+  <a href="https://ysskrishna.space">Author's site</a> •
   <a href="https://gist.github.com/ysskrishna/95eef8f89e763bd165dade87f5a97db9">Python (standalone)</a> •
-  <a href="https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7">Node (standalone)</a>
+  <a href="https://gist.github.com/ysskrishna/cfe3d1a89ffa122e783c2fda4f5aedf7">Node (standalone)</a> •
+  <a href="https://github.com/ysskrishna/json-ld-extract/issues">Report Issues</a>
 </p>
